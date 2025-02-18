@@ -22,6 +22,22 @@
 
         <input type="submit" value="Calculate Area">
     </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $side1 = $_POST['side1'];
+        $side2 = $_POST['side2'];
+        $side3 = $_POST['side3'];
+
+        $s = ($side1 + $side2 + $side3) / 2;
+
+        $area = $s * ($s - $side1) * ($s - $side2) * ($s - $side3);
+
+        $area = $area ** 0.5;
+
+        echo "<h3>The area of the triangle is: " . number_format($area, 2) . "</h3>";
+    }
+    ?>
 </body>
 
 </html>
