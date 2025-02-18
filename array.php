@@ -10,6 +10,14 @@
     <h1>
         List of Fruits
     </h1>
-    
+    <ol>
+        <?php
+        $fruits = array("Apple", "Banana", "Cherry", "Date", "Elderberry");
+        $count = count($fruits);
+        for ($i = 0; $i < $count; $i++) {
+            echo "<li>" . $fruits[$i] . "</li>";
+        }
+        ?>
+    </ol>
 </body>
 </html>
